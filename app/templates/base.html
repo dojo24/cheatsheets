@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" type='text/css' href="{% static 'css/styles.css' %}" />
+        <title>BeeDev's CheetSheets</title>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <header>
+            <h1>Melissa's Cheat sheet Website</h1>
+            <nav>
+                <a href="/index/">Home</a>
+                <span>
+                    <span id='showHTML'>HTML</span>
+                    <div id='htmlHide'>
+                        <!-- <a href="html.html">HTML Basics</a> -->
+                    </div>
+                </span>
+                <span>
+                    <span id='showCSS'>CSS</span>
+                    <div id='cssHide'>
+                        <!-- <a href="css.html">CSS Basics</a> -->
+                        <!-- <a href="flexbox.html">Flexbox</a> -->
+                        <a href="/cssShapes/">CSS Shapes</a>
+                    </div>
+                </span>
+                <span>
+                    <span id='showJS'>JS</span>
+                    <div id='jsHide'>
+                        <!-- <a href="js.html">JS Basics</a> -->
+                        <a href="loops.html">JS Loops</a>
+                        <!-- <a href="conditionals.html">JS Conditionals</a> -->
+                    </div>
+                </span>
+            </nav>
+        </header>
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2021 BeeDev Services</p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>
